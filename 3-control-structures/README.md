@@ -72,3 +72,27 @@ all of which can be controlled by the usuals:
 
 - `break` which work well with shorthand conditionals
 - `next` like `continue`
+
+## Iterators
+
+Some examples of numerical/Range iterators are:
+
+```
+5.times { puts "Hello" }
+1.upto(5) { puts "Hello" }
+5.downto(1) { puts "Hello" }
+(1..5).each { puts "Hello" }
+```
+
+can also pass variables (of the iterator) through to the block:
+
+```
+5.downto(1) do |i|
+  puts "Countdown #{i}"
+end
+puts "Blast off!"
+```
+
+### For ... in
+
+There is a `for ... in ...` version of the iterator, although the other format is preferred as it breaks the "standard" for the block variable `||`.
